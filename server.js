@@ -67,6 +67,11 @@ app.use(bodyParser.json());
 app.use('/run', function (req, res, next) {
     console.log(req.body);
 
+    if(!(req.body.username == config.username && req.body.password == config.password))
+    {
+        res.end(JSON.stringify({ activeNodes: activeNodes.length, result: 'ok', message: 'Authentication failed' }));    
+    }
+
     activeNodes.forEach(function(node){
         node.run(req.body.url,req.body.req);
     });

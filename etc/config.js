@@ -12,6 +12,9 @@ var config = {};
 config.server = 'localhost';
 config.port = 5004;
 
+config.username = 'seiferxiii';
+config.password = 'ddos-stress';
+
 
 /**
  * Expose `config`

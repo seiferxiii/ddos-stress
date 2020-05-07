@@ -22,6 +22,18 @@
           <br/>
           <form class="form-horizontal">
             <div class="form-group">
+              <label for="username" class="col-sm-3 control-label">Username</label>
+              <div class="col-sm-9">
+                <input type="username" class="form-control" id="username" placeholder="Username" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-sm-3 control-label">Password</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+              </div>
+            </div>
+            <div class="form-group">
               <label for="url" class="col-sm-3 control-label">URL</label>
               <div class="col-sm-9">
                 <input type="url" class="form-control" id="url" placeholder="http://" value="http://192.168.3.44/" required>
@@ -58,6 +70,8 @@
             data: {
                 'url': $('#url').val(),
                 'req': $('#req').val(),
+                'username': $('#username').val(),
+                'password': $('#password').val(),
                 'len': $('#len').val()
                 }
             }).done(function(data){
